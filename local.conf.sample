@@ -225,7 +225,9 @@ PACKAGECONFIG_append_pn-systemd = " resolved networkd"
 DISTRO_FEATURES_append = " systemd"
 
 DEFAULTTUNE_armv7a="armv7athf-neon"
-GCCVERSION="4.9.3"
+
+# 5.x has issues with mesa, revert to 4.9 for now
+GCCVERSION_armv7a="4.9.3"
 
 DISTRO_FEATURES_append = " opengl"
 
