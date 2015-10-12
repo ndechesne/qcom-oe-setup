@@ -7,6 +7,9 @@ BBFILES ?= ""
 BBLAYERS = " \
   ${BSPDIR}/sources/openembedded-core/meta \
   \
+  ${BSPDIR}/sources/meta-openembedded/meta-oe \
+  ${BSPDIR}/sources/meta-openembedded/meta-gnome \
+  \
   ${BSPDIR}/sources/meta-qcom \
   ${BSPDIR}/sources/meta-browser \
 "
