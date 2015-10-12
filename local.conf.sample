@@ -230,6 +230,7 @@ DEFAULTTUNE_armv7a="armv7athf-neon"
 GCCVERSION_armv7a="4.9.3"
 
 DISTRO_FEATURES_append = " opengl"
+DISTRO_FEATURES_append = " pam"
 
 # default to using Wayland, if you need to make an X11 image, comment or delete the next 2 lines
 DISTRO_FEATURES_append = " wayland"
