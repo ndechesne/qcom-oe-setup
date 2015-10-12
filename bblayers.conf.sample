@@ -8,4 +8,5 @@ BBLAYERS = " \
   ${BSPDIR}/sources/openembedded-core/meta \
   \
   ${BSPDIR}/sources/meta-qcom \
+  ${BSPDIR}/sources/meta-browser \
 "
