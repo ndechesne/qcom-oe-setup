@@ -201,37 +201,10 @@ ASSUME_PROVIDED += "libsdl-native"
 # this doesn't mean anything to you.
 CONF_VERSION = "1"
 
-# remove build artifacts after build completes
-INHERIT += "rm_work"
-
-# nice debug data
-INHERIT += "image-buildinfo"
-INHERIT += "buildhistory"
-INHERIT += "distrodata"
-BUILDHISTORY_COMMIT = "1"
-
-# add some useful debug tools
-EXTRA_IMAGE_FEATURES += "ssh-server-dropbear"
-CORE_IMAGE_EXTRA_INSTALL += "\
-    coreutils \
-    gptfdisk \
-    e2fsprogs-resize2fs \
-"
-
-# default to systemd as init
-VIRTUAL-RUNTIME_init_manager = "systemd"
-DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
-PACKAGECONFIG_append_pn-systemd = " resolved networkd"
-DISTRO_FEATURES_append = " systemd"
+# Default to X11 RPB distro from 96boards
+DISTRO ?= "rpb"
 
 DEFAULTTUNE_armv7a="armv7athf-neon"
 
 # 5.x has issues with mesa, revert to 4.9 for now
 GCCVERSION_armv7a="4.9.3"
-
-DISTRO_FEATURES_append = " opengl"
-DISTRO_FEATURES_append = " pam"
-
-# default to using Wayland, if you need to make an X11 image, comment or delete the next 2 lines
-DISTRO_FEATURES_append = " wayland"
-DISTRO_FEATURES_remove = " x11"

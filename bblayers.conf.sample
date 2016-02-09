@@ -10,6 +10,9 @@ BBLAYERS = " \
   ${BSPDIR}/sources/meta-openembedded/meta-oe \
   ${BSPDIR}/sources/meta-openembedded/meta-gnome \
   \
+  ${BSPDIR}/sources/meta-rpb \
+  ${BSPDIR}/sources/meta-96boards \
+  \
   ${BSPDIR}/sources/meta-qcom \
   ${BSPDIR}/sources/meta-browser \
 "
