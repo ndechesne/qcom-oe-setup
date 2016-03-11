@@ -12,6 +12,7 @@ BBLAYERS = " \
   \
   ${BSPDIR}/sources/meta-rpb \
   ${BSPDIR}/sources/meta-96boards \
+  ${BSPDIR}/sources/meta-linaro/meta-linaro-toolchain \
   \
   ${BSPDIR}/sources/meta-qcom \
   ${BSPDIR}/sources/meta-browser \
