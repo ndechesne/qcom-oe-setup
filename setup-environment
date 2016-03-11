@@ -28,7 +28,7 @@ if [ "$(whoami)" = "root" ]; then
 fi
 
 # check that we are where we think we are!
-if [ ! -f "sources/openembedded-core/oe-init-build-env" ]; then
+if [ ! -f "layers/openembedded-core/oe-init-build-env" ]; then
     echo -e "\nUNABLE TO FIND OPENEMBEDDED !"
     return 1
 fi
@@ -89,7 +89,7 @@ _PWD_PREV=$(pwd)
 
 # Warning: Sourcing the oe-init-build-env script changes the current directory.
 
-TEMPLATECONF=${_PWD_PREV}/sources/conf source sources/openembedded-core/oe-init-build-env ${_BUILDDIR}
+TEMPLATECONF=${_PWD_PREV}/layers/conf source layers/openembedded-core/oe-init-build-env ${_BUILDDIR}
 
 if [ "$_CONFIGS_FOUND" ]; then
     echo -e "\nConfig files already exist in folder ${_BUILDDIR}/conf/, they were not modified."
@@ -152,7 +152,7 @@ EOF
         done
 
         if [ "$READ_EULA" == 1 ]; then
-            more -d ${_PWD_PREV}/sources/meta-qcom/conf/EULA
+            more -d ${_PWD_PREV}/layers/meta-qcom/conf/EULA
             echo
             REPLY=
             while [ -z "$REPLY" ]; do
