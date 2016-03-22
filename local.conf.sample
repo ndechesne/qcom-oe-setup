@@ -205,6 +205,3 @@ CONF_VERSION = "1"
 DISTRO ?= "rpb"
 
 DEFAULTTUNE_armv7a="armv7athf-neon"
-
-# 5.x has issues with mesa, revert to 4.9 for now
-GCCVERSION_armv7a="4.9.3"
